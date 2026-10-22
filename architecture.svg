@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1180" width="1700" height="1180" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#475569"/>
+    </marker>
+    <marker id="ahd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#8b5cf6"/>
+    </marker>
+  </defs>
+
+  <rect width="1700" height="1180" fill="#ffffff"/>
+
+  <!-- ============ TITLE ============ -->
+  <text x="40" y="54" font-size="26" font-weight="700" fill="#0f172a">Model Hosting Platform — Architecture Overview</text>
+  <text x="40" y="80" font-size="13" fill="#64748b">Multi-model · multi-version inference on Amazon EKS · KServe serving plane · agentgateway routing · independent per-version scaling</text>
+
+  <!-- ============ CALLERS ============ -->
+  <rect x="40" y="110" width="1100" height="56" rx="10" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="590" y="143" font-size="12.5" fill="#334155" text-anchor="middle">Callers — internal services · batch jobs · notebooks · agent clients</text>
+
+  <!-- ============ ROUTE 53 ============ -->
+  <rect x="330" y="192" width="520" height="50" rx="10" fill="#fff7ed" stroke="#fdba74" stroke-width="1.5"/>
+  <text x="590" y="223" font-size="12.5" fill="#7c2d12" text-anchor="middle">Route 53 — private / zonal records · health checks</text>
+
+  <!-- ============ ALB ============ -->
+  <rect x="310" y="266" width="560" height="58" rx="10" fill="#fff7ed" stroke="#fb923c" stroke-width="1.5"/>
+  <text x="590" y="300" font-size="12.5" fill="#7c2d12" text-anchor="middle">ALB — WAF · ACM TLS · access logs · connection limits</text>
+
+  <!-- ============ AGENTGATEWAY ============ -->
+  <rect x="40" y="348" width="1100" height="150" rx="10" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.5"/>
+  <text x="64" y="370" font-size="9" letter-spacing="1.2" fill="#6366f1">ROUTING / DATA PLANE</text>
+  <text x="64" y="392" font-size="15" font-weight="700" fill="#312e81">agentgateway — Kubernetes Gateway API data plane (Rust)</text>
+  <text x="64" y="411" font-size="10.5" fill="#4c4f8a">3+ replicas across 3 AZs · routes derived from Git · the single intelligent hop on the hot path</text>
+
+  <rect x="64" y="424" width="330" height="30" rx="6" fill="#ffffff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="78" y="444" font-size="10.5" fill="#334155">AuthN / AuthZ · JWT · OIDC</text>
+  <rect x="425" y="424" width="330" height="30" rx="6" fill="#ffffff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="439" y="444" font-size="10.5" fill="#334155">Per-tenant + per-model rate limits</text>
+  <rect x="786" y="424" width="330" height="30" rx="6" fill="#ffffff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="800" y="444" font-size="10.5" fill="#334155">Model-aware routing · weighted split</text>
+
+  <rect x="64" y="460" width="330" height="30" rx="6" fill="#ffffff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="78" y="480" font-size="10.5" fill="#334155">Timeouts · retries · circuit breaking</text>
+  <rect x="425" y="460" width="330" height="30" rx="6" fill="#ffffff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="439" y="480" font-size="10.5" fill="#334155">Request mirroring for shadow tests</text>
+  <rect x="786" y="460" width="330" height="30" rx="6" fill="#ffffff" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="800" y="480" font-size="10.5" fill="#334155">Per model / version Prometheus + OTel</text>
+
+  <!-- ============ KSERVE INFERENCESERVICES ============ -->
+  <rect x="40" y="566" width="257" height="104" rx="10" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="60" y="594" font-size="12.5" font-weight="700" fill="#065f46">model-a · v1 (previous)</text>
+  <text x="60" y="617" font-size="10.5" fill="#047857">RawDeployment · own Service</text>
+  <text x="60" y="639" font-size="10.5" fill="#047857">rollback target</text>
+
+  <rect x="321" y="566" width="257" height="104" rx="10" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="341" y="594" font-size="12.5" font-weight="700" fill="#065f46">model-a · v2 (stable)</text>
+  <text x="341" y="617" font-size="10.5" fill="#047857">RawDeployment · own Service</text>
+  <text x="341" y="639" font-size="10.5" fill="#047857">own KEDA scaler</text>
+
+  <rect x="602" y="566" width="257" height="104" rx="10" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="622" y="594" font-size="12.5" font-weight="700" fill="#065f46">model-b · v1 (stable)</text>
+  <text x="622" y="617" font-size="10.5" fill="#047857">RawDeployment · own Service</text>
+  <text x="622" y="639" font-size="10.5" fill="#047857">own KEDA scaler</text>
+
+  <rect x="883" y="566" width="257" height="104" rx="10" fill="#faf5ff" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="903" y="594" font-size="12.5" font-weight="700" fill="#5b21b6">Agent / tool backends</text>
+  <text x="903" y="617" font-size="10.5" fill="#7c3aed">MCP · A2A endpoints</text>
+  <text x="903" y="639" font-size="10.5" fill="#7c3aed">sidecars · adapters</text>
+
+  <!-- ============ EKS NODE FLEET ============ -->
+  <rect x="40" y="722" width="1100" height="196" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="64" y="748" font-size="12.5" font-weight="700" fill="#334155">EKS node fleet — all workloads above run here · provisioned by Karpenter · multi-AZ</text>
+
+  <rect x="64" y="778" width="248" height="110" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="82" y="804" font-size="12" font-weight="700" fill="#0f172a">system</text>
+  <text x="82" y="826" font-size="10.5" fill="#475569">m7g · c7i</text>
+  <text x="82" y="846" font-size="10.5" fill="#475569">On-Demand</text>
+  <text x="82" y="866" font-size="10.5" fill="#475569">add-ons · controllers</text>
+
+  <rect x="332" y="778" width="248" height="110" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.2"/>
+  <text x="350" y="804" font-size="12" font-weight="700" fill="#0f172a">cpu-inference</text>
+  <text x="350" y="826" font-size="10.5" fill="#475569">c7i · m7i</text>
+  <text x="350" y="846" font-size="10.5" fill="#475569">On-Demand + Spot</text>
+  <text x="350" y="866" font-size="10.5" fill="#475569">CPU model pods</text>
+
+  <rect x="600" y="778" width="248" height="110" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+  <text x="618" y="796" font-size="12" font-weight="700" fill="#1e3a8a">gpu-inference</text>
+  <text x="618" y="826" font-size="10.5" fill="#1d4ed8">g6 · g5 · g6e · p5</text>
+  <text x="618" y="846" font-size="10.5" fill="#1d4ed8">On-Demand</text>
+  <text x="618" y="866" font-size="10.5" fill="#1d4ed8">SLO-bearing models</text>
+
+  <rect x="868" y="778" width="248" height="110" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+  <text x="886" y="796" font-size="12" font-weight="700" fill="#1e3a8a">gpu-spot</text>
+  <text x="886" y="826" font-size="10.5" fill="#1d4ed8">g6 · g5</text>
+  <text x="886" y="846" font-size="10.5" fill="#1d4ed8">Spot · tainted</text>
+  <text x="886" y="866" font-size="10.5" fill="#1d4ed8">batch · preview</text>
+
+  <!-- ============ SHARED SERVICES ============ -->
+  <rect x="40" y="940" width="1100" height="160" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="64" y="966" font-size="12.5" font-weight="700" fill="#334155">Shared AWS services — artifacts, weights, secrets, telemetry</text>
+
+  <rect x="64" y="980" width="248" height="46" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="188" y="1008" font-size="10.5" fill="#334155" text-anchor="middle">ECR — signed images</text>
+  <rect x="332" y="980" width="248" height="46" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="456" y="1008" font-size="10.5" fill="#334155" text-anchor="middle">S3 — weights + model cards</text>
+  <rect x="600" y="980" width="248" height="46" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="724" y="1008" font-size="10.5" fill="#334155" text-anchor="middle">EFS — weight cache</text>
+  <rect x="868" y="980" width="248" height="46" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="992" y="1008" font-size="10.5" fill="#334155" text-anchor="middle">Secrets Manager / SSM</text>
+
+  <rect x="64" y="1036" width="248" height="46" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="188" y="1064" font-size="10.5" fill="#334155" text-anchor="middle">KMS — encryption</text>
+  <rect x="332" y="1036" width="248" height="46" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="456" y="1064" font-size="10.5" fill="#334155" text-anchor="middle">CloudTrail — audit</text>
+  <rect x="600" y="1036" width="248" height="46" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="724" y="1064" font-size="10.5" fill="#334155" text-anchor="middle">AMP + AMG — dashboards</text>
+  <rect x="868" y="1036" width="248" height="46" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="992" y="1064" font-size="10.5" fill="#334155" text-anchor="middle">CloudWatch — logs</text>
+
+  <!-- ============ REQUEST PATH ARROWS ============ -->
+  <line x1="590" y1="166" x2="590" y2="192" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <text x="602" y="185" font-size="9.5" fill="#94a3b8">HTTPS</text>
+
+  <line x1="590" y1="242" x2="590" y2="266" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <text x="602" y="259" font-size="9.5" fill="#94a3b8">private subnets</text>
+
+  <line x1="590" y1="324" x2="590" y2="348" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+
+  <line x1="169" y1="498" x2="169" y2="566" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="450" y1="498" x2="450" y2="566" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="731" y1="498" x2="731" y2="566" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="1012" y1="498" x2="1012" y2="566" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+
+  <text x="181" y="536" font-size="9.5" fill="#64748b">/models/model-a</text>
+  <text x="462" y="536" font-size="9.5" fill="#64748b">/models/model-a/v2</text>
+  <text x="743" y="536" font-size="9.5" fill="#64748b">/models/model-b</text>
+  <text x="1024" y="536" font-size="9.5" fill="#64748b">/mcp · /a2a</text>
+
+  <line x1="169" y1="670" x2="169" y2="722" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="450" y1="670" x2="450" y2="722" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="731" y1="670" x2="731" y2="722" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="1012" y1="670" x2="1012" y2="722" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+
+  <line x1="590" y1="918" x2="590" y2="940" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <text x="602" y="934" font-size="9.5" fill="#94a3b8">image pulls · weights · metrics</text>
+
+  <!-- ============ SIDEBAR: LEGEND ============ -->
+  <rect x="1210" y="192" width="450" height="140" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="1234" y="218" font-size="13" font-weight="700" fill="#334155">Legend</text>
+  <line x1="1234" y1="242" x2="1288" y2="242" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <text x="1300" y="246" font-size="10.5" fill="#475569">request path</text>
+  <line x1="1234" y1="270" x2="1288" y2="270" stroke="#8b5cf6" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ahd)"/>
+  <text x="1300" y="274" font-size="10.5" fill="#6d28d9">control / telemetry</text>
+  <text x="1234" y="304" font-size="10.5" fill="#64748b">Colour key — one colour per layer:</text>
+  <text x="1234" y="324" font-size="10.5" fill="#64748b">edge · routing · serving · compute · state</text>
+
+  <!-- ============ SIDEBAR: DELIVERY & IaC ============ -->
+  <rect x="1210" y="348" width="450" height="150" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="1234" y="374" font-size="13" font-weight="700" fill="#334155">Delivery and IaC</text>
+  <text x="1234" y="398" font-size="10.5" fill="#475569">GitLab CI — build · scan · sign → ECR</text>
+  <text x="1234" y="422" font-size="10.5" fill="#475569">Argo CD — GitOps sync, drift, revert</text>
+  <text x="1234" y="446" font-size="10.5" fill="#475569">Terraform / OpenTofu + Helm — infra</text>
+  <text x="1234" y="470" font-size="10.5" fill="#475569">Kyverno — admission policy</text>
+
+  <!-- ============ SIDEBAR: VERSION ROUTING ============ -->
+  <rect x="1210" y="556" width="450" height="114" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="1234" y="582" font-size="13" font-weight="700" fill="#334155">Version routing (the alias)</text>
+  <text x="1234" y="606" font-size="10.5" fill="#475569">/v1/models/{model}/predict → alias</text>
+  <text x="1234" y="628" font-size="10.5" fill="#475569">stable 95% · canary 5%</text>
+  <text x="1234" y="650" font-size="10.5" fill="#475569">rollback = weight flip &lt; 1 min</text>
+
+  <!-- ============ SIDEBAR: OBSERVABILITY ============ -->
+  <rect x="1210" y="722" width="450" height="196" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="1234" y="748" font-size="13" font-weight="700" fill="#334155">Observability and cost</text>
+  <text x="1234" y="774" font-size="10.5" fill="#475569">AMP + ADOT — metrics</text>
+  <text x="1234" y="798" font-size="10.5" fill="#475569">Amazon Managed Grafana — dashboards</text>
+  <text x="1234" y="822" font-size="10.5" fill="#475569">CloudWatch — JSON logs, alarms</text>
+  <text x="1234" y="846" font-size="10.5" fill="#475569">X-Ray — gateway traces</text>
+  <text x="1234" y="870" font-size="10.5" fill="#475569">DCGM — GPU telemetry</text>
+  <text x="1234" y="894" font-size="10.5" fill="#475569">OpenCost — per-model cost</text>
+
+  <!-- ============ CONTROL / TELEMETRY ARROWS ============ -->
+  <line x1="1210" y1="423" x2="1146" y2="423" stroke="#8b5cf6" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ahd)"/>
+  <line x1="1146" y1="820" x2="1210" y2="820" stroke="#8b5cf6" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ahd)"/>
+
+  <!-- ============ FOOTER ============ -->
+  <text x="40" y="1130" font-size="10.5" fill="#64748b">Three independent scaling tiers — Tier 1: agentgateway replicas (HPA on RPS + connections) · Tier 2: each InferenceService (KEDA on in-flight concurrency and queue depth) · Tier 3: Karpenter node fleet</text>
+  <text x="40" y="1152" font-size="10.5" fill="#64748b">Runtime classes per model: custom-container (default) · vllm (generative) · triton (shared small models). Single region, multi-AZ. State lives in Git, S3 and ECR — no state in inference pods.</text>
+</svg>

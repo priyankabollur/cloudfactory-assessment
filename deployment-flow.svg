@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1780 1260" width="1780" height="1260" font-family="Segoe UI, Inter, Helvetica Neue, Arial, sans-serif">
+  <defs>
+<g id="i-amp"><image width="56" height="56" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQKADAAQAAAABAAAAQAAAAABGUUKwAAAEyklEQVRoBe1ZXWgUVxTemVnHxHUX8y8+FI1i64OJID6YqK3og/pQEwUfpEUaoSIoBX9RQWkfU/XFB0VqpVQiFqKxBCzSP39iCyIqIqKYWCpa1PxsNr877s74TW462Z2Z3ZnZe2YlsMOQ3Hvuued+3zn3nHsnEf6rOBSYzI84mcHr2AsE3ncECxEoRIDTA4UtxOlA7umTPgJBbhdkMyDNioQPr5Hr50BJ6Xg28M0vyZexbBO8jwn+XSWAvuyPnWJJsYFK7RvpWXmCloOPWwi+B/r4b0/eLGrGiwa6EBp8SBo+EmA7J7a7DS7HiwYQMyEJdGbERwJC8ZQ0oIKgd2XirPORQPx6JwBHjjUgGfBGjq5HV7n2VKdB9xD7IxVY7ED7lNpZU1fNr7i3z5AHF1SJZSG1Z8iQcDZyiQDcOePUpsoH+/Giga4tCPXVwNDJDn1I01B/RtseJB6/Dn5YWdq2FRxsp+Qg9FxGAddtcZTEio6vpOqy/h2tIz/dBTjgBnpwAJPEo1fyx/MCSoLzfPAcAffFsXhjLdAnu3pGWu8z12Ln9DaeYXEoaliIqipWhYs21MAjmcLoGBPPBMzFcc9lrGFTHCVx+q5PMDR4/M9AUjVwqN1D8D26VOeDZwIGlLSGpTha3W/o6zsnEJg4HzK5wJiQteGZALYsDDoUxwzuH0eiJLJC8jbomQAuZCgprDiiPqKBBVlxNFbO4n7o2LtgzC+GBfcNz1UIppFw43dMOYiDCehZYenf2RraVicvnytWhAKCEDvYPvzd31YoHuqYdbJFkgsBkxG9OF5qCn5UZZInn/f1rDuN08AkR3fCBdzXbAICACSWh8p/3yHODKO26Jc2QcDFAbtrtP1htOm8lQChxHMO2K6N4hiQ9LvaeG150R9jtWX5XFt9QiENAR2QqqXB0sa6o2/ThD50yAiYa8uxBqBlQh9gT5ikyQHYo60tEwCdWtKe0AonHVfj2kB89OJ9qTIslk7ThpT41cfRphbaz19bHGQRsLWeByFZDuQBq+0SXF9kpReb5GXVtnZdCpWbXb0bvnepbKvGFQEhXGRr1L2Q3wJXBKJbz5dd3Y6sxafjwJEr7nGHv14b2l6v9g7DgvtZtppcEUj+2xf9okVTkkBTvHmx7QJWITShj1mYCwtWBU8SLgJYSfnrn9i+n9GINH8qL53tuDZ0oAk1zMJcR31HBV4CWGCk5Q62kCBLM85ulj4oybIkRqEDTehjVhZN90NE54AolJz7fOpq/ePG8Yn/+qTvsx/NdyfHaRkUCCKgW1a16LYLbv5chXtr9MsLVOixMlcVSnUKrhLK9c6ixprY3svDP9xOHWLtaVuWRL5dr9zo1Abj1tGcJUQRGFtfuaV/78t1+r8zrA+TMx3raM4SUgJjH+ZyfbUtGiYnv2BTEkg87VZfD4qV04Pzyk0cIIEco9AxDXF2KQkAitLRhZ/WP9QxCRvlRGyaTk0gQxr4lAAgQ00gQxr4lAD0BGzTwL8EoCcAi9Y08C8B/CFgSQP/EgAEyE5i2GIPq/Q4kmc21vwv03+TnwDMOHESwyjSQLmhF9PUBxLyE4DZJ7qNpoLNb5s+AvnFT30O5Bk9litEIP8+T1+xEIF0f+S/V4hA/n2evuKkj8A7O30Mh4NgWKsAAAAASUVORK5CYII="/></g>
+    <g id="i-ecr"><image width="56" height="56" xlink:href="data:image/png;base64,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"/></g>
+    <g id="i-eks"><image width="56" height="56" xlink:href="data:image/png;base64,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"/></g>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#475569"/>
+    </marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <rect width="1780" height="1260" fill="#ffffff"/>
+
+  <text x="40" y="54" font-size="26" font-weight="700" fill="#0f172a">Deployment and Release Flow — Commit to Production Traffic</text>
+  <text x="40" y="78" font-size="13" fill="#64748b">Every stage is a Git commit reconciled by Argo CD · a rollout is a traffic change, not a redeploy · rollback lands in under a minute</text>
+
+  <!-- ============ STAGE 0 ============ -->
+  <circle cx="72" cy="166" r="16" fill="#312e81"/>
+  <text x="72" y="171" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">0</text>
+  <text x="100" y="162" font-size="13" font-weight="700" fill="#0f172a">Build</text>
+  <text x="100" y="180" font-size="10" fill="#64748b">Image is built, scanned, signed and pushed</text>
+  <rect x="100" y="194" width="460" height="56" rx="7" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>
+  <text x="116" y="216" font-size="10.5" font-weight="700" fill="#0f172a">GitLab CI</text>
+  <text x="116" y="233" font-size="9" fill="#64748b">docker build · unit tests · vulnerability scan</text>
+  <line x1="564" y1="222" x2="592" y2="222" stroke="#475569" stroke-width="1.5" marker-end="url(#ah)"/>
+  <rect x="600" y="194" width="460" height="56" rx="7" fill="#fff7ed" stroke="#fdba74" stroke-width="1.3"/>
+  <use xlink:href="#i-ecr" transform="translate(612,204) scale(0.6429)"/>
+  <text x="660" y="216" font-size="10.5" font-weight="700" fill="#7c2d12">Amazon ECR</text>
+  <text x="660" y="233" font-size="9" fill="#8a5a2b">pinned digest · SBOM · cosign signature</text>
+  <text x="100" y="272" font-size="9.5" fill="#475569">Gate — no critical CVEs · signature valid · never :latest</text>
+
+  <!-- ============ STAGE 1 ============ -->
+  <circle cx="72" cy="318" r="16" fill="#312e81"/>
+  <text x="72" y="323" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="100" y="314" font-size="13" font-weight="700" fill="#0f172a">Validate</text>
+  <text x="100" y="332" font-size="10" fill="#64748b">Contract checks and a load benchmark must pass before the image may run</text>
+  <rect x="100" y="346" width="460" height="56" rx="7" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>
+  <text x="116" y="368" font-size="10.5" font-weight="700" fill="#0f172a">Contract test job</text>
+  <text x="116" y="385" font-size="9" fill="#64748b">health and ready probes · SIGTERM drain · /metrics</text>
+  <line x1="564" y1="374" x2="592" y2="374" stroke="#475569" stroke-width="1.5" marker-end="url(#ah)"/>
+  <rect x="600" y="346" width="460" height="56" rx="7" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>
+  <text x="616" y="368" font-size="10.5" font-weight="700" fill="#0f172a">Benchmark job</text>
+  <text x="616" y="385" font-size="9" fill="#64748b">per-replica throughput · safe concurrency measured</text>
+  <text x="100" y="424" font-size="9.5" fill="#475569">Gate — contract passes · the autoscaling numbers become evidence, not guesswork</text>
+
+  <!-- ============ STAGE 2 ============ -->
+  <circle cx="72" cy="470" r="16" fill="#312e81"/>
+  <text x="72" y="475" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="100" y="466" font-size="13" font-weight="700" fill="#0f172a">Shadow</text>
+  <text x="100" y="484" font-size="10" fill="#64748b">Deployed with zero real traffic and compared against the incumbent</text>
+  <rect x="100" y="498" width="330" height="56" rx="7" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>
+  <text x="116" y="520" font-size="10.5" font-weight="700" fill="#0f172a">PR to model-catalog</text>
+  <text x="116" y="537" font-size="9" fill="#64748b">version yaml · model card</text>
+  <line x1="434" y1="526" x2="461" y2="526" stroke="#475569" stroke-width="1.5" marker-end="url(#ah)"/>
+  <rect x="465" y="498" width="330" height="56" rx="7" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>
+  <text x="481" y="520" font-size="10.5" font-weight="700" fill="#0f172a">Argo CD</text>
+  <text x="481" y="537" font-size="9" fill="#64748b">syncs the InferenceService</text>
+  <line x1="799" y1="526" x2="826" y2="526" stroke="#475569" stroke-width="1.5" marker-end="url(#ah)"/>
+  <rect x="830" y="498" width="330" height="56" rx="7" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.3"/>
+  <text x="846" y="520" font-size="10.5" font-weight="700" fill="#312e81">agentgateway</text>
+  <text x="846" y="537" font-size="9" fill="#4c4f8a">mirrors a sampled fraction</text>
+  <text x="100" y="576" font-size="9.5" fill="#475569">Gate — error, latency and output comparison acceptable over an agreed sample</text>
+
+  <!-- ============ STAGE 3 ============ -->
+  <circle cx="72" cy="622" r="16" fill="#0d9488"/>
+  <text x="72" y="627" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="100" y="618" font-size="13" font-weight="700" fill="#0f172a">Canary</text>
+  <text x="100" y="636" font-size="10" fill="#64748b">A one-line routing.yaml change — nothing is redeployed</text>
+  <rect x="100" y="650" width="330" height="56" rx="7" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>
+  <text x="116" y="672" font-size="10.5" font-weight="700" fill="#0f172a">Git commit</text>
+  <text x="116" y="689" font-size="9" fill="#64748b">routing.yaml — stable 95 / canary 5</text>
+  <line x1="434" y1="678" x2="461" y2="678" stroke="#475569" stroke-width="1.5" marker-end="url(#ah)"/>
+  <rect x="465" y="650" width="330" height="56" rx="7" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>
+  <text x="481" y="672" font-size="10.5" font-weight="700" fill="#0f172a">Argo CD</text>
+  <text x="481" y="689" font-size="9" fill="#64748b">reconciles the weights</text>
+  <line x1="799" y1="678" x2="826" y2="678" stroke="#475569" stroke-width="1.5" marker-end="url(#ah)"/>
+  <rect x="830" y="650" width="330" height="56" rx="7" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.3"/>
+  <text x="846" y="672" font-size="10.5" font-weight="700" fill="#312e81">agentgateway</text>
+  <text x="846" y="689" font-size="9" fill="#4c4f8a">stable 95% · canary 5%</text>
+  <text x="100" y="728" font-size="9.5" fill="#475569">Gate — bake window clean · error delta under 0.1% · saturation healthy</text>
+
+  <!-- ============ STAGE 4 ============ -->
+  <circle cx="72" cy="774" r="16" fill="#0d9488"/>
+  <text x="72" y="779" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="100" y="770" font-size="13" font-weight="700" fill="#0f172a">Ramp</text>
+  <text x="100" y="788" font-size="10" fill="#64748b">Progressive weight increase, each step gated automatically</text>
+  <rect x="100" y="802" width="460" height="56" rx="7" fill="#fdf2f8" stroke="#f9a8d4" stroke-width="1.3"/>
+  <use xlink:href="#i-amp" transform="translate(112,812) scale(0.6429)"/>
+  <text x="160" y="824" font-size="10.5" font-weight="700" fill="#831843">Observability gates</text>
+  <text x="160" y="841" font-size="9" fill="#9d174d">AMP and Managed Grafana check SLO and saturation</text>
+  <line x1="564" y1="830" x2="592" y2="830" stroke="#475569" stroke-width="1.5" marker-end="url(#ah)"/>
+  <rect x="600" y="802" width="460" height="56" rx="7" fill="#eef2ff" stroke="#a5b4fc" stroke-width="1.3"/>
+  <text x="616" y="824" font-size="10.5" font-weight="700" fill="#312e81">agentgateway</text>
+  <text x="616" y="841" font-size="9" fill="#4c4f8a">25% → 50% → 100%, one step at a time</text>
+  <text x="100" y="880" font-size="9.5" fill="#475569">Gate — every step holds its bake window before the next begins (auto-abort on two breaches)</text>
+
+  <!-- ============ STAGE 5 ============ -->
+  <circle cx="72" cy="926" r="16" fill="#047857"/>
+  <text x="72" y="931" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="100" y="922" font-size="13" font-weight="700" fill="#0f172a">Promote</text>
+  <text x="100" y="940" font-size="10" fill="#64748b">The alias moves; the previous version stays warm as the rollback target</text>
+  <rect x="100" y="954" width="330" height="56" rx="7" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>
+  <text x="116" y="976" font-size="10.5" font-weight="700" fill="#0f172a">model-catalog</text>
+  <text x="116" y="993" font-size="9" fill="#64748b">stable = the new version</text>
+  <line x1="434" y1="982" x2="461" y2="982" stroke="#475569" stroke-width="1.5" marker-end="url(#ah)"/>
+  <rect x="465" y="954" width="330" height="56" rx="7" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>
+  <text x="481" y="976" font-size="10.5" font-weight="700" fill="#0f172a">Argo CD</text>
+  <text x="481" y="993" font-size="9" fill="#64748b">reconciles the alias</text>
+  <line x1="799" y1="982" x2="826" y2="982" stroke="#475569" stroke-width="1.5" marker-end="url(#ah)"/>
+  <rect x="830" y="954" width="330" height="56" rx="7" fill="#ecfdf5" stroke="#6ee7b7" stroke-width="1.3"/>
+  <use xlink:href="#i-eks" transform="translate(842,964) scale(0.6429)"/>
+  <text x="890" y="976" font-size="10.5" font-weight="700" fill="#065f46">EKS · KServe</text>
+  <text x="890" y="993" font-size="9" fill="#047857">100% of traffic to the new version</text>
+  <text x="100" y="1032" font-size="9.5" fill="#475569">Gate — 24 to 72 hour soak clean before the previous version may be retired</text>
+
+  <!-- ============ STAGE 6 ============ -->
+  <circle cx="72" cy="1078" r="16" fill="#64748b"/>
+  <text x="72" y="1083" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+  <text x="100" y="1074" font-size="13" font-weight="700" fill="#0f172a">Retire</text>
+  <text x="100" y="1092" font-size="10" fill="#64748b">Clean up after the retention window, keeping GPU spend bounded</text>
+  <rect x="100" y="1106" width="460" height="56" rx="7" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>
+  <text x="116" y="1128" font-size="10.5" font-weight="700" fill="#0f172a">Argo CD</text>
+  <text x="116" y="1145" font-size="9" fill="#64748b">scales the previous version to 0 replicas</text>
+  <line x1="564" y1="1134" x2="592" y2="1134" stroke="#475569" stroke-width="1.5" marker-end="url(#ah)"/>
+  <rect x="600" y="1106" width="460" height="56" rx="7" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.3"/>
+  <text x="616" y="1128" font-size="10.5" font-weight="700" fill="#0f172a">KServe</text>
+  <text x="616" y="1145" font-size="9" fill="#64748b">deletes the InferenceService</text>
+  <text x="100" y="1184" font-size="9.5" fill="#475569">Gate — no rollback requested in the window · at most 3 live versions per model</text>
+
+  <!-- ============ STAGE CONNECTORS ============ -->
+  <line x1="72" y1="182" x2="72" y2="298" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="72" y1="334" x2="72" y2="450" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="72" y1="486" x2="72" y2="602" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="72" y1="638" x2="72" y2="754" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="72" y1="790" x2="72" y2="906" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+  <line x1="72" y1="942" x2="72" y2="1058" stroke="#475569" stroke-width="1.6" marker-end="url(#ah)"/>
+
+  <!-- ============ RIGHT COLUMN ============ -->
+  <rect x="1220" y="130" width="520" height="330" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+  <text x="1244" y="158" font-size="13" font-weight="700" fill="#334155">Infrastructure track</text>
+  <text x="1244" y="190" font-size="10" fill="#475569">1 · Terraform / OpenTofu PR — plan posted for review</text>
+  <text x="1244" y="214" font-size="10" fill="#475569">2 · Approvals, policy and cost checks</text>
+  <text x="1244" y="238" font-size="10" fill="#475569">3 · Apply dev → staging → prod</text>
+  <text x="1244" y="262" font-size="10" fill="#475569">4 · EKS control plane: one minor version at a time</text>
+  <text x="1244" y="286" font-size="10" fill="#475569">5 · Nodes replaced by Karpenter drift, honouring PDBs</text>
+  <text x="1244" y="310" font-size="10" fill="#475569">6 · Gateway: N+1 beside N, 10% of routes, then flip</text>
+  <text x="1244" y="334" font-size="10" fill="#475569">7 · Add-ons and CRDs pinned, upgraded in staging first</text>
+  <text x="1244" y="366" font-size="9" fill="#94a3b8">Platform changes reach every model, so staging mirrors</text>
+  <text x="1244" y="382" font-size="9" fill="#94a3b8">production shape and every change reverts through Git.</text>
+  <text x="1244" y="414" font-size="9" fill="#94a3b8">GPU capacity: hold one AZ of headroom during node work —</text>
+  <text x="1244" y="430" font-size="9" fill="#94a3b8">stock-outs bite exactly when nodes are being replaced.</text>
+
+  <rect x="1220" y="484" width="520" height="200" rx="10" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.4"/>
+  <text x="1244" y="512" font-size="13" font-weight="700" fill="#991b1b">Rollback — always available</text>
+  <text x="1244" y="542" font-size="10" fill="#7f1d1d">Git revert of routing.yaml</text>
+  <text x="1244" y="566" font-size="10" fill="#7f1d1d">Argo CD reconciles the weights</text>
+  <text x="1244" y="590" font-size="10" fill="#7f1d1d">agentgateway flips traffic — under 1 minute</text>
+  <text x="1244" y="614" font-size="10" fill="#7f1d1d">previous version still warm for 14 days</text>
+  <text x="1244" y="638" font-size="10" fill="#7f1d1d">no image rebuild, no redeploy, no consumer change</text>
+  <text x="1244" y="664" font-size="9" fill="#b91c1c">This is the whole reason a version is an immutable workload.</text>
+
+  <rect x="1220" y="708" width="520" height="190" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+  <text x="1244" y="736" font-size="13" font-weight="700" fill="#334155">Guardrails</text>
+  <text x="1244" y="766" font-size="10" fill="#475569">One canary per model at a time</text>
+  <text x="1244" y="790" font-size="10" fill="#475569">At most 3 live versions: stable, canary, previous</text>
+  <text x="1244" y="814" font-size="10" fill="#475569">No rollouts during change-freeze windows</text>
+  <text x="1244" y="838" font-size="10" fill="#475569">Every change is a reviewable, revertible Git diff</text>
+  <text x="1244" y="868" font-size="9" fill="#94a3b8">Auto-abort fires on two consecutive gate breaches, so a</text>
+  <text x="1244" y="884" font-size="9" fill="#94a3b8">noisy sample cannot fail a good version.</text>
+
+  <rect x="1220" y="922" width="520" height="250" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.4"/>
+  <text x="1244" y="950" font-size="13" font-weight="700" fill="#334155">Actors</text>
+  <use xlink:href="#i-ecr" transform="translate(1244,966) scale(0.5)"/>
+  <text x="1284" y="982" font-size="10" font-weight="700" fill="#0f172a">Amazon ECR</text>
+  <text x="1284" y="996" font-size="9" fill="#64748b">image artifacts, digests, signatures</text>
+  <use xlink:href="#i-eks" transform="translate(1244,1022) scale(0.5)"/>
+  <text x="1284" y="1038" font-size="10" font-weight="700" fill="#0f172a">Amazon EKS</text>
+  <text x="1284" y="1052" font-size="9" fill="#64748b">KServe, KEDA, Karpenter, agentgateway</text>
+  <use xlink:href="#i-amp" transform="translate(1244,1078) scale(0.5)"/>
+  <text x="1284" y="1094" font-size="10" font-weight="700" fill="#0f172a">Managed Prometheus</text>
+  <text x="1284" y="1108" font-size="9" fill="#64748b">the signal behind every gate</text>
+  <text x="1244" y="1144" font-size="9" fill="#94a3b8">GitLab, Argo CD, Kyverno and Terraform are the</text>
+  <text x="1244" y="1158" font-size="9" fill="#94a3b8">non-AWS actors and are named on every stage above.</text>
+
+  <!-- rollback pointer back into the canary stage -->
+  <line x1="1220" y1="678" x2="1172" y2="678" stroke="#dc2626" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ahr)"/>
+
+  <text x="40" y="1232" font-size="10.5" fill="#64748b">Deployment is never imperative: nothing is applied by hand, every stage is reproducible from Git, and the same mechanism serves a model rollout and an infrastructure change.</text>
+</svg>
