@@ -48,7 +48,9 @@ This document describes a platform that hosts **many different machine-learning 
 Below are some assumptions which I have considered for completing the entire work:
 
 (i) Models are synchronous, stateless and request/responses are from HTTP services with no session affinity and durable states.
+
 (ii) Traffic is internally originated {service to service within org}
+
 (iii) No active/active set up and considering multi-AZ with single region
 
 ## 3. Architecture
@@ -56,50 +58,6 @@ Below are some assumptions which I have considered for completing the entire wor
 ### 3.1 Layered view
 
 ![Model hosting platform — architecture overview](architecture.svg)
-
-```text
-                              ┌─────────────────────────────────────────┐
-   Internal apps / services ──┤  Route 53  (private/zonal records)      │
-   Batch jobs / notebooks  ───┤  + optional CloudFront for public edges │
-                              └────────────────────┬────────────────────┘
-                                                   │ TLS (ACM)
-                              ┌────────────────────▼────────────────────┐
-                              │  ALB (internal or public)               │
-                              │  WAF, access logs, connection limits    │
-                              └────────────────────┬────────────────────┘
-                                                   │ HTTP, private subnets
-   ┌───────────────────────────────────────────────▼──────────────────────────────────────────────┐
-   │  AGENTGATEWAY  (Kubernetes Gateway API data plane, Rust)            [3+ replicas, 3 AZs]     │
-   │  ─ authN/authZ (JWT/OIDC)      ─ per-tenant + per-model rate limits                         │
-   │  ─ model-aware routing          ─ weighted splitting (canary/rollback)                      │
-   │  ─ timeouts, retries, circuit breaking, request mirroring                                   │
-   │  ─ OTel traces + Prometheus metrics (per model, per version, per tenant)                    │
-   └───┬──────────────────────────┬──────────────────────────┬──────────────────────────┬─────────┘
-       │ /models/a (alias)        │ /models/a/v2             │ /models/b                │ /mcp, /a2a
-       │                          │                          │                          │ (agent paths)
-   ┌───▼──────────────┐   ┌───────▼──────────┐      ┌────────▼─────────┐        ┌────────▼─────────┐
-   │ KServe ISVC      │   │ KServe ISVC      │      │ KServe ISVC      │        │ sidecar services │
-   │ model-a  v1      │   │ model-a  v2      │      │ model-b  v1      │        │ (tools, adapters)│
-   │ ─ own Deployment │   │ ─ own Deployment │      │ ─ own Deployment │        └──────────────────┘
-   │ ─ own KEDA scaler│   │ ─ own KEDA scaler│      │ ─ own KEDA scaler│
-   │ ─ own Service    │   │ ─ own Service    │      │ ─ own Service    │
-   └───┬──────────────┘   └───────┬──────────┘      └────────┬─────────┘
-       └──────────────────────────┴──────────────────────────┘
-                                  │  scheduled by Karpenter
-   ┌──────────────────────────────▼──────────────────────────────────────────────────────────────┐
-   │  EKS NODE FLEET (multi-AZ)                                                                  │
-   │  ┌──────────────┐ ┌──────────────┐ ┌──────────────┐ ┌────────────────────────────────────┐ │
-   │  │ system pool  │ │ cpu-inference│ │ gpu-inference│ │ gpu-inference-spot (batch/preview) │ │
-   │  │ m7g/c7i      │ │ c7i / m7i    │ │ g6 / g5 / p5 │ │ spot, interrupt-tolerant           │ │
-   │  └──────────────┘ └──────────────┘ └──────────────┘ └────────────────────────────────────┘ │
-   └─────────────────────────────────────────────────────────────────────────────────────────────┘
-                                  │
-   ┌──────────────────────────────▼──────────────────────────────────────────────────────────────┐
-   │  SHARED SERVICES                                                                            │
-   │  ECR (images, signed, scanned)   S3 (weights + model cards)   EFS (shared weight cache)      │
-   │  Secrets Manager / SSM           AMP + AMG + CloudWatch       KMS      CloudTrail            │
-   └─────────────────────────────────────────────────────────────────────────────────────────────┘
-```
 
 ### 3.2 Request path walkthrough
 
@@ -207,14 +165,14 @@ model-catalog/                   # owned by ML teams + platform reviewers
 └── tenants/                     # quota and priority definitions
 ```
 
-**The important structural decision:** `routing.yaml` is the only file changed during a canary or rollback. Infrastructure is not touched, workloads are not redeployed, and the change is a one-line, reviewable, instantly revertible diff.
+**The important structural decision:** `routing.yaml` is the only file changed during a canary or rollback. Infrastructure is not touched, workloads are not redeployed, and the change is a one-line, reviewable, instantly revertible.
 
 ### 4.2 Terraform structure and practices
 
 - **Remote state:** S3 backend, versioning + SSE-KMS, DynamoDB (or native S3 locking) for concurrency. One state per environment, never per-resource.
 - **Environment parity:** `dev` → `staging` → `prod` are the same modules with different tfvars.
 - **Plan gating:** `terraform plan` posted to the PR for every change; apply requires approval on `prod`. Plans are the review artifact.
-- **Bootstrap:** the EKS cluster and the GitOps controller are the only Terraform-managed pieces that must exist before GitOps can take over. After bootstrap, add-ons and workloads are Argo-managed. Keep the Terraform surface small and let GitOps own the churn.
+- **Bootstrap:** the EKS cluster and the GitOps controller are the only Terraform-managed pieces that must exist before GitOps can take over. After bootstrap, add-ons and workloads are Argo-managed.
 
 ### 4.3 EKS baseline configuration (based on AWS best practices)
 
